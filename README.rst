@@ -1,4 +1,4 @@
 
 =======================
-Leonardo grayscale Theme
+Leonardo grayscale theme
 =======================
