@@ -1,0 +1,59 @@
+{% extends widget.get_base_template %}
+
+{% load i18n static %}
+
+{% block content %}
+<script src="{% static 'js/lib/jquery.waypoints.min.js' %}"></script>
+
+<div class="circular-bar">
+  <input type="text" class="dial" id="dial-{{ widget.fe_identifier }}" value="0" >
+  <div class="circular-bar-content">
+    <strong class="counter counter-analog" id="counter-{{ widget.fe_identifier }}">{{ widget.number }}</strong>
+    {% if widget.label %}
+    <span>{{ widget.label }}</span>
+    {% endif %}
+  </div>
+</div>  
+
+<script src="/static/js/jquery.knob.min.js" type="text/javascript"></script>
+<script>
+jQuery(document).ready(function($) {
+  $('#counter-{{ widget.fe_identifier }}').appear(function() {
+    $('#counter-{{ widget.fe_identifier }}').counterUp({
+      delay: 10,
+      time: {{ widget.interval }}
+    });
+  });
+  $('#dial-{{ widget.fe_identifier }}').each(function () {
+    var elm = $(this);
+    var perc = {{ widget.number }};
+
+    elm.knob({ 
+      'value': 0, 
+      'min':0,
+      'max':{{ widget.format }},
+      "skin":"tron",
+      "readOnly":true,
+      "thickness":.1,
+      "width": 250,
+      "height": 250,
+      "linecap": "round",
+      "bgColor": "rgba(255,255,255,0.3)",
+      "fgColor": "rgba(8,190,223,0.5)",
+      'dynamicDraw': true, 
+      "displayInput":false
+    });
+
+    $('#counter-{{ widget.fe_identifier }}').appear(function() {
+      $({value: 0}).animate({ value: perc }, {
+        duration: {{ widget.interval }} * 1.6,
+        easing: 'linear',
+        progress: function () {                  
+          elm.val(Math.ceil(this.value)).trigger('change');
+        }
+      });
+    });
+  });
+});
+</script>
+{% endblock %}
