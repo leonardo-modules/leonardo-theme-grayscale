@@ -5,7 +5,7 @@ LEONARDO_APPS = [
 ]
 
 LEONARDO_JS_FILES = [
-    'js/tcpcloud.js',
+    'js/grayscale.js',
 ]
 
 LEONARDO_CSS_FILES = [
