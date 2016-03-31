@@ -16,7 +16,7 @@
       </div>
     </nav>
     {% if feincms_page.layout == "boxed" and request.path == "/" %}
-    <header class="intro">
+    <header class="intro parallax">
       <div class="intro-body">
         <div class="container">
           {% feincms_render_region feincms_page "toolbar" request %}
@@ -55,3 +55,23 @@
     {% analytical_body_bottom %}
   </body>
 </html>
+
+<script>
+(function(){
+
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = 0.5;
+
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
+
+      var windowYOffset = window.pageYOffset,
+          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  };
+
+})();
+</script>

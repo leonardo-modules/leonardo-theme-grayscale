@@ -130,7 +130,11 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(/static/img/intro-bg.jpg) no-repeat bottom center scroll;
+    &.parallax {
+        padding: 100px 0;
+        background-position: 0 0;
+        background-image: url("/static/img/intro-bg.jpg");
+    }
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
