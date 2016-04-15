@@ -26,21 +26,21 @@
     {% feincms_render_region feincms_page "col3" request %}
     {% render_region_tools feincms_page "col3" request %}
     {% else %}
-    <div class="body-content">
+    <section class="container content-section text-center">
       <div class="{{ feincms_page.get_layout_class }}">
-      <section class="col1 {% get_col_classes feincms_page 'col1' %}">
+      <!-- <section class="col1 {% get_col_classes feincms_page 'col1' %}">
         {% feincms_render_region feincms_page "col1" request %}
         {% render_region_tools feincms_page "col1" request %}
-      </section>
+      </section> -->
       <section class="col3 {% get_col_classes feincms_page 'col3' %}">
           {% feincms_render_region feincms_page "col3" request %}
           {% render_region_tools feincms_page "col3" request %}
         {% block body_main %}{% endblock %}
       </section>
-      <section class="col2 {% get_col_classes feincms_page 'col2' %}">
+      <!-- <section class="col2 {% get_col_classes feincms_page 'col2' %}">
         {% feincms_render_region feincms_page "col2" request %}
         {% render_region_tools feincms_page "col2" request %}
-      </section>
+      </section> -->
       </div>
       {% endif %}
     </div>
