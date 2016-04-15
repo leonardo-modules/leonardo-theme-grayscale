@@ -409,3 +409,23 @@ body {
         }
     }
 }
+
+.border-light {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    height: 3px;
+    margin: 0 auto;
+    width: 50px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    float: left;
+}
+
+div.section-heading:hover {
+    .border-light {
+        width: 100px;
+        }
+}
