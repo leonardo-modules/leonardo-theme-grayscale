@@ -221,7 +221,7 @@ a {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 150px;
     }
 
     .download-section {
@@ -376,12 +376,30 @@ body {
     }
 }
 
-.bg-headline {
+.bg-headline1 {
     color: $white;
     &.parallax {
         padding: 100px 0;
         background-position: 0 0;
         background-image: url("/static/img/headline.jpg");
+    }
+}
+
+.bg-headline2 {
+    color: $white;
+    &.parallax {
+        padding: 100px 0;
+        background-position: 0 0;
+        background-image: url("/static/img/bg-1.jpeg");
+    }
+}
+
+.bg-headline3 {
+    color: $white;
+    &.parallax {
+        padding: 100px 0;
+        background-position: 0 0;
+        background-image: url("/static/img/bg-2.jpg");
     }
 }
 

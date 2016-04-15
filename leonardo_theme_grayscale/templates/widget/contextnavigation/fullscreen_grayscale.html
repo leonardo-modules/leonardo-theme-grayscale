@@ -7,25 +7,25 @@
 {# GRAYSCALE #}
 
 {% if item.slug == "polls" %}
-<section id="{{ item.slug }}" class="bg-headline parallax">
+<section id="{{ item.slug }}" class="bg-headline1 parallax">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == "blog" %}
-<section id="{{ item.slug }}" class="bg-headline parallax">
+<section id="{{ item.slug }}" class="bg-headline2 parallax">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == "brigades" %}
-<section id="{{ item.slug }}" class="bg-headline parallax">
+<section id="{{ item.slug }}" class="bg-headline parallax4">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == "contact" %}
-<section id="{{ item.slug }}" class="bg-headline parallax">
+<section id="{{ item.slug }}" class="bg-headline3 parallax">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
@@ -61,6 +61,44 @@
   };
 
 })();
+</script>
+<script>
+// (function(){
+
+//   var parallax = document.querySelectorAll(".parallax2"),
+//       speed = 1;
+
+//   window.onscroll = function(){
+//     [].slice.call(parallax).forEach(function(el,i){
+
+//       var windowYOffset = window.pageYOffset,
+//           elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+//       el.style.backgroundPosition = elBackgrounPos;
+
+//     });
+//   };
+
+// })();
+</script>
+<script>
+// (function(){
+
+//   var parallax = document.querySelectorAll(".parallax3"),
+//       speed = 1;
+
+//   window.onscroll = function(){
+//     [].slice.call(parallax).forEach(function(el,i){
+
+//       var windowYOffset = window.pageYOffset,
+//           elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+//       el.style.backgroundPosition = elBackgrounPos;
+
+//     });
+//   };
+
+// })();
 </script>
 
 {% endblock %}
