@@ -13,19 +13,19 @@
   </div>
 </section>
 {% elif item.slug == "blog" %}
-<section id="{{ item.slug }}" class="bg-headline2 parallax">
+<section id="{{ item.slug }}" class="bg-gray">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == "brigades" %}
-<section id="{{ item.slug }}" class="bg-headline parallax4">
+<section id="{{ item.slug }}" class="bg-gray">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
 {% elif item.slug == "contact" %}
-<section id="{{ item.slug }}" class="bg-headline3 parallax">
+<section id="{{ item.slug }}" class="bg-headline2 parallax">
   <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
@@ -53,7 +53,7 @@
     [].slice.call(parallax).forEach(function(el,i){
 
       var windowYOffset = window.pageYOffset,
-          elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+          elBackgrounPos = "50% " + (windowYOffset + speed) + "em";
 
       el.style.backgroundPosition = elBackgrounPos;
 
@@ -61,44 +61,6 @@
   };
 
 })();
-</script>
-<script>
-// (function(){
-
-//   var parallax = document.querySelectorAll(".parallax2"),
-//       speed = 1;
-
-//   window.onscroll = function(){
-//     [].slice.call(parallax).forEach(function(el,i){
-
-//       var windowYOffset = window.pageYOffset,
-//           elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-//       el.style.backgroundPosition = elBackgrounPos;
-
-//     });
-//   };
-
-// })();
-</script>
-<script>
-// (function(){
-
-//   var parallax = document.querySelectorAll(".parallax3"),
-//       speed = 1;
-
-//   window.onscroll = function(){
-//     [].slice.call(parallax).forEach(function(el,i){
-
-//       var windowYOffset = window.pageYOffset,
-//           elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-//       el.style.backgroundPosition = elBackgrounPos;
-
-//     });
-//   };
-
-// })();
 </script>
 
 {% endblock %}
