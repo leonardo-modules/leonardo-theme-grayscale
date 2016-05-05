@@ -255,8 +255,7 @@ footer {
 
 ::selection {
     text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(10, 108, 29, 0.2) none repeat scroll 0% 0%;
+    background: rgba($primary, 0.6);
     color: white;
 }
 
