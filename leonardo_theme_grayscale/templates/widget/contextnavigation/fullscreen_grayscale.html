@@ -30,6 +30,12 @@
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>
+{% elif item.slug == "map" %}
+<section id="{{ item.slug }}" class="bg-map">
+  <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
+    {% include "widget/contextnavigation/_item.html" %}
+  </div>
+</section>
 
 {# UNKNOWN #}
 
