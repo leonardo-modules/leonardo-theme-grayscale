@@ -8,7 +8,7 @@
 
 {% if item.slug == "polls" %}
 <section id="{{ item.slug }}" class="bg-headline1 parallax">
-  <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %}">
+  <div class="container{% if item.layout == 'fluid' %}-fluid{% endif %} polls-container">
     {% include "widget/contextnavigation/_item.html" %}
   </div>
 </section>

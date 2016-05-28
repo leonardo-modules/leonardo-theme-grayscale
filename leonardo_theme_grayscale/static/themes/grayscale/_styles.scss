@@ -167,18 +167,6 @@ a {
     padding-top: 100px;
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: white;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 .btn {
     text-transform: uppercase;
     font-family: $font-default;
@@ -329,7 +317,7 @@ bg-map {
     &.parallax {
         padding: 100px 0;
         background-position: 0 0;
-        background-image: url("/static/img/headline.jpg");
+        background-image: url("/static/img/polls_bg.jpg");
     }
 }
 
@@ -423,4 +411,10 @@ form label {
 
 .gm-style .gm-style-iw {
     color: #4E4E4E;
+}
+
+.polls-container {
+    background-color: rgba(0, 0, 0, 0.66);
+    padding: 50px 0px 80px 0px;
+    height: auto;
 }
